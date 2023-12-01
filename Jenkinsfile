@@ -18,6 +18,9 @@ pipeline {
                 dir('frontend') {
                     bat 'npm.cmd install'
                 }
+                  dir('backend') {
+                    bat 'npm.cmd install'
+                }
             }
         }
         
@@ -26,6 +29,7 @@ pipeline {
             steps {
                 script {
                     bat 'docker build -t shivank07/travel-guru:frontend frontend'
+                    bat 'docker build -t shivank07/travel-guru:backend backend'
                 }
             }
         }
@@ -34,6 +38,7 @@ pipeline {
             steps {
                 withDockerRegistry([ credentialsId: "shivank-dockerhub", url: "" ]) {
                     bat 'docker push shivank07/travel-guru:frontend'
+                    bat 'docker push shivank07/travel-guru:backend'
                 }
             }
         }
