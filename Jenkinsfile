@@ -67,7 +67,7 @@ pipeline {
                 attachLog: true,
                 body: 'The build was successful.',
                 subject: 'Build Success',
-                to: 'shivank.goel20@st.niituniversity.in',
+                to: 'shivank.goel20@st.niituniversity.in','shivansh.mital20@st.niituniversity.in',
                 mimeType: 'text/html'
             )
         }
