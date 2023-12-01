@@ -25,7 +25,7 @@ pipeline {
         stage('Build Frontend and Backend Images') {
             steps {
                 script {
-                    bat 'docker build -t shivank/travel-guru:frontend frontend'
+                    bat 'docker build -t shivank07/travel-guru:frontend frontend'
                 }
             }
         }
