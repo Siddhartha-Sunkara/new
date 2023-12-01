@@ -33,7 +33,7 @@ pipeline {
         stage('Push Images to Hub') {
             steps {
                 withDockerRegistry([ credentialsId: "shivank-dockerhub", url: "" ]) {
-                    bat 'docker push shivank/travel-guru:frontend'
+                    bat 'docker push shivank07/travel-guru:frontend'
                 }
             }
         }
