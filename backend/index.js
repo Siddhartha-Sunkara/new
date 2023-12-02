@@ -53,3 +53,5 @@ app.listen(port, () => {
     connect();
     console.log('listening on port', port);
 })
+
+export default index
