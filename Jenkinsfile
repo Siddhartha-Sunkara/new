@@ -23,6 +23,9 @@ pipeline {
                 }
             }
         }
+
+        //This is stage for testing the frontend
+        
         
         // This stage is telling Jenkins to build the images for the frontend.
         stage('Build Frontend and Backend Images') {
