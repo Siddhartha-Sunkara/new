@@ -4,6 +4,7 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
+}
 
     stages {
         stage('Git Checkout') {
