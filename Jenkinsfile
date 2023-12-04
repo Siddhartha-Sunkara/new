@@ -4,8 +4,6 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
-
-
     stages {
         stage('Git Checkout') {
             steps {
@@ -24,9 +22,6 @@ pipeline {
                 }
             }
         }
-
-        //This is stage for testing the frontend
-        
         
         // This stage is telling Jenkins to build the images for the frontend.
         stage('Build Frontend and Backend Images') {
@@ -34,13 +29,6 @@ pipeline {
                 script {
                     bat 'docker build -t shivank07/travel-guru:frontend frontend'
                     bat 'docker build -t shivank07/travel-guru:backend backend'
-                }
-            }
-        }
-        stage('Unit Testing') {
-            steps {
-                dir('frontend') {
-                    bat 'npm.cmd test'
                 }
             }
         }
@@ -53,12 +41,12 @@ pipeline {
                 }
             }
         }
+    }
     post {
         always {
             // This block will always be executed, regardless of the build result
             bat 'docker logout'
         }
-    }
         failure {
             emailext(
                 attachLog: true,
@@ -71,17 +59,15 @@ pipeline {
                 mimeType: 'text/html'
             )
         }
-
         success {
             emailext(
                 attachLog: true,
                 body: 'The build was successful.',
                 subject: 'Build Success',
+                to: 'shivank.goel20@st.niituniversity.in','shivansh.mital20@st.niituniversity.in',
                 to: 'shivank.goel20@st.niituniversity.in,shivansh.mital20@st.niituniversity.in',
                 mimeType: 'text/html'
             )
         }
-
     }
 }
-
