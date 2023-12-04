@@ -4,7 +4,7 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
-}
+
 
     stages {
         stage('Git Checkout') {
@@ -58,7 +58,7 @@ pipeline {
             // This block will always be executed, regardless of the build result
             bat 'docker logout'
         }
-
+    }
         failure {
             emailext(
                 attachLog: true,
@@ -81,6 +81,6 @@ pipeline {
                 mimeType: 'text/html'
             )
         }
-    }
 
+    }
 }
