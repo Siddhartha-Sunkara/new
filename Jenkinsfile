@@ -36,6 +36,12 @@ pipeline {
                 }
             }
         }
+        stage('Unit Testing') {
+            steps {
+                dir('frontend') {
+                    bat 'npm.cmd test'
+                }
+            }
         // This stage is pushing images to dockerhub.
         stage('Push Images to Hub') {
             steps {
