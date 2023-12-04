@@ -43,6 +43,7 @@ pipeline {
                     bat 'npm.cmd test'
                 }
             }
+        }
         // This stage is pushing images to dockerhub.
         stage('Push Images to Hub') {
             steps {
@@ -83,4 +84,4 @@ pipeline {
         }
 
     }
-}
+
