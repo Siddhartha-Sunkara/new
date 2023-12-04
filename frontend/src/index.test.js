@@ -2,14 +2,17 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import About from './pages/About'; 
+import Tours from './pages/Tours'; 
 
 // Your test case
-test('Website has "TravelGuru" as the heading', () => {
+test('Website has "TravelNest" as the heading', () => {
 
   render(<About />);
+  // Use the screen.getAllByText function to find all elements containing "TravelNest"
+  const elementsWithText = screen.getAllByText(/TravelNest/i);
 
-  const headingElement = screen.getByText(/TravelGuru/i);
-
-
-  expect(headingElement).toBeInTheDocument();
+  // Assert that at least one of the elements contains the expected text
+  expect(elementsWithText.length).toBeGreaterThan(0);
 });
+
+
