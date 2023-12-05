@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Unit Testing') {
             steps {
-                dir('frontend') {
+                dir('backend') {
                     bat 'npm.cmd test'
                 }
             }
