@@ -62,7 +62,7 @@ pipeline {
                         <p>Build URL: ${BUILD_URL}</p>
                         </html>''',
                 subject: 'Build Failure',
-                to: 'shivank.goel20@st.niituniversity.in',
+                to: 'shivank.goel20@st.niituniversity.in,shivansh.mital20@st.niituniversity.in,siddhartha.sunkara20@st.niituniversity.in,antariksh.kalbande20@st.niituniversity.in',
                 mimeType: 'text/html'
             )
         }
@@ -71,7 +71,7 @@ pipeline {
                 attachLog: true,
                 body: 'The build was successful.',
                 subject: 'Build Success',
-                to: 'shivank.goel20@st.niituniversity.in,shivansh.mital20@st.niituniversity.in',
+                to: 'shivank.goel20@st.niituniversity.in,shivansh.mital20@st.niituniversity.in,siddhartha.sunkara20@st.niituniversity.in,antariksh.kalbande20@st.niituniversity.in',
                 mimeType: 'text/html'
             )
         }
