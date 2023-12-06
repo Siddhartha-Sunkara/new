@@ -33,10 +33,11 @@ const Home = () => {
                   <span className="highlight">memories</span>
                 </h1>
                 <p>
-                  Are you a travel enthusiast looking for your next adventure?
-                  We know that planning a trip can be overwhelming. That's why
-                  we've created a one-stop-shop for all your Hotel needs Look no
-                  further than TravelNest -Your ultimate travel companion.
+                  Are you passionate about travel and in search of your next
+                  exciting adventure? We understand that organizing a journey
+                  can be daunting. That's precisely why we've established a
+                  comprehensive solution for all your hotel requirements. Look
+                  no more – TravelNest is your ultimate travel companion.
                 </p>
               </div>
             </Col>
